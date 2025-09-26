@@ -3,101 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Responsive Blog</title>
+  <title>My Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
+  <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="container">
-      <div class="logo">My<span>Blog</span></div>
+      <h1 class="logo">MyBlog<span>.</span></h1>
       <nav class="navbar">
         <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#posts">Posts</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>Welcome to My Blog</h1>
-      <p>Discover insights, tutorials, and stories that inspire growth and creativity.</p>
-      <input type="text" id="searchInput" placeholder="🔍 Search posts..." />
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="posts" class="blog-section">
-    <div class="container blog-layout">
-      <main class="blog-posts" id="blogPosts">
-        <!-- Blog posts will load here -->
-      </main>
-
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="widget">
-          <h3>Categories</h3>
-          <ul>
-            <li><a href="#" class="category-filter active" data-category="all">All</a></li>
-            <li><a href="#" class="category-filter" data-category="tech">Tech</a></li>
-            <li><a href="#" class="category-filter" data-category="design">Design</a></li>
-            <li><a href="#" class="category-filter" data-category="lifestyle">Lifestyle</a></li>
-            <li><a href="#" class="category-filter" data-category="travel">Travel</a></li>
-          </ul>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container main-content">
+    <!-- Blog Posts Section -->
+    <section class="blog-posts">
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?nature" alt="Nature Image">
+        <div class="post-content">
+          <h2>Exploring the Beauty of Nature</h2>
+          <p class="date">September 26, 2025</p>
+          <p class="excerpt">
+            Discover how spending time outdoors can improve your mood, health, and creativity.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
         </div>
-      </aside>
-    </div>
+      </article>
 
-    <!-- Pagination -->
-    <div class="pagination">
-      <button id="prevPage" disabled>Previous</button>
-      <span id="pageNumber">1</span>
-      <button id="nextPage">Next</button>
-    </div>
-  </section>
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?technology" alt="Technology">
+        <div class="post-content">
+          <h2>The Future of Technology</h2>
+          <p class="date">September 24, 2025</p>
+          <p class="excerpt">
+            A look at the emerging innovations shaping the next generation of digital life.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
 
-  <!-- About -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2>About This Blog</h2>
-      <p>MyBlog is a digital space where creativity meets knowledge. Our goal is to help designers, developers, and dreamers grow by sharing stories and tutorials that matter.</p>
-    </div>
-  </section>
+      <article class="post-card">
+        <img src="https://source.unsplash.com/600x400/?travel" alt="Travel">
+        <div class="post-content">
+          <h2>Top 10 Travel Destinations</h2>
+          <p class="date">September 22, 2025</p>
+          <p class="excerpt">
+            From beaches to mountains, here are the best places to visit this year.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have a question or want to collaborate? Reach out below:</p>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+      <section class="widget categories">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Health</a></li>
+        </ul>
+      </section>
 
-  <!-- Footer -->
+      <section class="widget tags">
+        <h3>Tags</h3>
+        <div class="tag-list">
+          <a href="#">#design</a>
+          <a href="#">#coding</a>
+          <a href="#">#wellness</a>
+          <a href="#">#adventure</a>
+          <a href="#">#food</a>
+        </div>
+      </section>
+
+      <section class="widget recent-posts">
+        <h3>Recent Posts</h3>
+        <ul>
+          <li><a href="#">How to Stay Motivated Every Day</a></li>
+          <li><a href="#">The Best Gadgets for Remote Work</a></li>
+          <li><a href="#">Healthy Recipes You’ll Love</a></li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>&copy; 2025 MyBlog | Designed with ❤️ by Festus</p>
-  </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <img id="modalImage" alt="">
-      <p id="modalText"></p>
+    <div class="container">
+      <p>&copy; 2025 MyBlog. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+      </div>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+  </footer>
 </body>
 </html>
